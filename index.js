@@ -70,8 +70,6 @@ function pluginInit(patternlab) {
 
   if (pluginFiles && pluginFiles.length > 0) {
 
-    let tab_frontend_snippet = fs.readFileSync(path.resolve(__dirname + '/src/snippet.js'), 'utf8');
-
     for (let i = 0; i < pluginFiles.length; i++) {
       try {
         var fileStat = fs.statSync(pluginFiles[i]);
@@ -83,17 +81,6 @@ function pluginInit(patternlab) {
           //depending on your plugin's job - you might need to alter the dist file instead of copying.
           //if you are simply copying dist files, you can probably do the below:
           fs.copySync(pluginFiles[i], writePath);
-
-          //in this case, we need to alter the dist file to loop through our tabs to load as defined in the package.json
-          //we are also being a bit lazy here, since we only expect one file
-          // let tabJSFileContents = fs.readFileSync(pluginFiles[i], 'utf8');
-          // var snippetString = '';
-          // for (let j = 0; j < fileTypes.length; j++) {
-          //   let tabSnippetLocal = tab_frontend_snippet.replace(/<<type>>/g, fileTypes[j]).replace(/<<typeUC>>/g, fileTypes[j].toUpperCase());
-          //   snippetString += tabSnippetLocal + EOL;
-          // }
-          // tabJSFileContents = tabJSFileContents.replace('/*SNIPPETS*/', snippetString);
-          // fs.outputFileSync(writePath, tabJSFileContents);
         }
       } catch (ex) {
         console.trace('plugin-node-tab: Error occurred while copying pluginFile', pluginFiles[i]);

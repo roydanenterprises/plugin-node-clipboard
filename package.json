@@ -1,6 +1,6 @@
 {
   "name": "plugin-node-clipboard",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha",
   "description": "The Clipboard plugin allows users to copy code snippets from the code panel",
   "main": "index.js",
   "dependencies": {
