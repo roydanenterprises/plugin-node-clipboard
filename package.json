@@ -1,0 +1,26 @@
+{
+  "name": "plugin-node-clipboard",
+  "version": "1.0.0",
+  "description": "The Clipboard plugin allows users to copy code snippets from the code panel",
+  "main": "index.js",
+  "dependencies": {
+    "fs-extra": "^0.30.0",
+    "glob": "^7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roydanenterprises/plugin-node-clipboard.git"
+  },
+  "scripts": {
+    "test": "eslint dist/plugin-node-clipboard.js src/** index.js"
+  },
+  "author": "Roydan Enterprises",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roydanenterprises/plugin-node-clipboard/issues"
+  },
+  "homepage": "https://github.com/roydanenterprises/plugin-node-clipboard#readme",
+  "devDependencies": {
+    "eslint": "^3.5.0"
+  }
+}
