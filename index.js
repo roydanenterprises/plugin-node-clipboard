@@ -28,7 +28,7 @@ function getPluginFrontendConfig() {
     'templates':[],
     'stylesheets':[],
     'javascripts':[
-      'patternlab-components\/pattern-lab\/clipboard.min.js',
+      'patternlab-components\/pattern-lab\/' + pluginName + '\/js\/clipboard.min.js',
       'patternlab-components\/pattern-lab\/' + pluginName + '\/js\/' + pluginName + '.js'
     ],
     'onready':'PluginClipboard.init()',
